@@ -553,7 +553,8 @@ section,
   justify-content: center;
 }
 
-.hero img {
+.hero img,
+.hero video {
   position: absolute;
   inset: 0;
   display: block;
@@ -565,7 +566,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
+  background: color-mix(in srgb, var(--background-color), transparent 55%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -578,13 +579,17 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 64px;
-  font-weight: 700;
+  font-size: 56px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
 .hero p {
-  margin: 5px 0 0 0;
-  font-size: 26px;
+  margin: 15px 0 0 0;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
 
 .hero p span {

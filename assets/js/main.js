@@ -86,6 +86,8 @@
       if (scrollDirection !== 0) {
         skillScroll.scrollLeft += scrollDirection;
         scrollAnimId = requestAnimationFrame(autoScroll);
+      } else {
+        scrollAnimId = null;
       }
     }
 

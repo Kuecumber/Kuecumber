@@ -56,6 +56,14 @@
   scroll-behavior: smooth;
 }
 
+#updates {
+  --background-color: #161616;
+}
+
+#footer {
+  --background-color: #050505;
+}
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -254,7 +262,7 @@ Sidebar
   flex-direction: column;
   gap: 24px;
   padding: 20px 14px;
-  background: color-mix(in srgb, var(--background-color), transparent 10%);
+  background: color-mix(in srgb, var(--background-color), transparent 40%);
   border-radius: 0 8px 8px 0;
   z-index: 998;
   transition: transform 0.4s ease;
@@ -274,6 +282,11 @@ Sidebar
   color: var(--heading-color);
 }
 
+.edge-sidebar {
+  background: color-mix(in srgb, var(--background-color), transparent 40%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
 
 
 /*--------------------------------------------------------------

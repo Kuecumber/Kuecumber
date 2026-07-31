@@ -177,8 +177,9 @@ Menu
   stroke: var(--heading-color);
   stroke-width: 2;
   stroke-linecap: round;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform-box: fill-box;
   transform-origin: center;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 /* X state, applied when toggle has .active */

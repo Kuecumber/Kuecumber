@@ -57,6 +57,21 @@
     });
   }
 
+    /**
+   * Edge sidebar reveal
+   */
+  const edgeSidebar = document.querySelector('#edgeSidebar');
+
+  if (edgeSidebar) {
+    document.addEventListener('mousemove', function(e) {
+      if (e.clientX < 60) {
+        edgeSidebar.classList.add('visible');
+      } else if (e.clientX > 220) {
+        edgeSidebar.classList.remove('visible');
+      }
+    });
+  }
+
   /**
    * Scroll top button
    */

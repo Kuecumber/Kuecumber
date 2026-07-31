@@ -157,9 +157,89 @@ h6 {
 }
 
 .header .logo img {
-  height: 32px;
+  height: 64px;
   display: block;
 }
+
+/*-----------
+Menu
+-----------*/
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+  position: relative;
+}
+
+.menu-toggle .line {
+  stroke: var(--heading-color);
+  stroke-width: 2;
+  stroke-linecap: round;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform-origin: center;
+}
+
+/* X state, applied when toggle has .active */
+.menu-toggle.active .line1 {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.menu-toggle.active .line2 {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--background-color);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.overlay-nav a {
+  font-size: 42px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--heading-color);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease, color 0.3s ease;
+}
+
+.overlay-nav a:hover {
+  color: color-mix(in srgb, var(--heading-color), transparent 40%);
+}
+
+.menu-overlay.active .overlay-nav a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-overlay.active .overlay-nav a:nth-child(1) { transition-delay: 0.1s; }
+.menu-overlay.active .overlay-nav a:nth-child(2) { transition-delay: 0.2s; }
+.menu-overlay.active .overlay-nav a:nth-child(3) { transition-delay: 0.3s; }
+
 
 /*--------------------------------------------------------------
 # Navigation Menu

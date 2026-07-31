@@ -75,6 +75,26 @@
     });
   });
 
+    /**
+   * Fullscreen menu toggle
+   */
+  const menuToggleBtn = document.querySelector('#menuToggle');
+  const menuOverlay = document.querySelector('#menuOverlay');
+
+  if (menuToggleBtn && menuOverlay) {
+    menuToggleBtn.addEventListener('click', function() {
+      menuToggleBtn.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.overlay-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggleBtn.classList.remove('active');
+        menuOverlay.classList.remove('active');
+      });
+    });
+  }
+
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
 

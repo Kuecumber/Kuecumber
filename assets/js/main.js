@@ -72,6 +72,46 @@
     });
   }
 
+
+  /**
+   * Skill toolkit hover-scroll
+   */
+  const skillScroll = document.querySelector('#skillScroll');
+
+  if (skillScroll) {
+    let scrollDirection = 0;
+    let scrollAnimId = null;
+
+    function autoScroll() {
+      if (scrollDirection !== 0) {
+        skillScroll.scrollLeft += scrollDirection;
+        scrollAnimId = requestAnimationFrame(autoScroll);
+      }
+    }
+
+    skillScroll.addEventListener('mousemove', function(e) {
+      const rect = skillScroll.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const edgeZone = 80;
+
+      if (x < edgeZone) {
+        scrollDirection = -2;
+      } else if (x > rect.width - edgeZone) {
+        scrollDirection = 2;
+      } else {
+        scrollDirection = 0;
+      }
+
+      if (scrollDirection !== 0 && !scrollAnimId) {
+        autoScroll();
+      }
+    });
+
+    skillScroll.addEventListener('mouseleave', function() {
+      scrollDirection = 0;
+    });
+  }
+
   
     /**
    * Project tile video hover

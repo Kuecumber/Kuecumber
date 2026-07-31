@@ -72,6 +72,21 @@
     });
   }
 
+  
+    /**
+   * Project tile video hover
+   */
+  document.querySelectorAll('.project-tile').forEach(tile => {
+    const video = tile.querySelector('.project-video');
+    if (video) {
+      tile.addEventListener('mouseenter', () => video.play());
+      tile.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+      });
+    }
+  });
+
   /**
    * Scroll top button
    */

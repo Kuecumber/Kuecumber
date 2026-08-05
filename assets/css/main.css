@@ -3,7 +3,6 @@
 :root {
   --default-font: "Poppins", sans-serif;
   --heading-font: "Poppins", sans-serif;
-  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -465,22 +464,6 @@ section,
   letter-spacing: 1px;
 }
 
-.hero .social-links {
-  margin-top: 25px;
-}
-
-.hero .social-links a {
-  font-size: 24px;
-  display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  line-height: 1;
-  margin-right: 20px;
-  transition: 0.3s;
-}
-
-.hero .social-links a:hover {
-  color: var(--accent-color);
-}
 
 @media (max-width: 768px) {
   .hero h2 {

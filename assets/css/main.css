@@ -751,3 +751,17 @@ section,
   color: var(--default-color);
   letter-spacing: 0.5px;
 }
+
+
+.breadcrumbs ol li a {
+  color: var(--default-color);
+  transition: color 0.3s ease;
+}
+
+.breadcrumbs ol li a:hover {
+  color: var(--heading-color);
+}
+
+.breadcrumbs ol li.current {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}

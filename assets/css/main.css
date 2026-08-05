@@ -777,3 +777,29 @@ section,
   height: 100%;
   object-fit: cover;
 }
+
+
+
+
+.project-detail-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.split-image img {
+  width: 100%;
+  display: block;
+}
+
+.split-text .project-detail-subhead {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .project-detail-split {
+    grid-template-columns: 1fr;
+  }
+}

@@ -695,12 +695,59 @@ section,
 }
 
 .project-detail-gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
 .project-detail-gallery img {
   width: 100%;
   display: block;
+}
+
+
+.project-detail-software {
+  margin-bottom: 40px;
+}
+
+.software-label {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  margin-bottom: 14px;
+}
+
+.software-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.software-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 75%);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.software-pill:hover {
+  border-color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 95%);
+}
+
+.software-pill img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.software-pill span {
+  font-size: 13px;
+  color: var(--default-color);
+  letter-spacing: 0.5px;
 }

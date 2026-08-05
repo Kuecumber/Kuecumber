@@ -766,3 +766,14 @@ section,
 .breadcrumbs ol li.current {
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
+
+
+
+
+.project-tile--static img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

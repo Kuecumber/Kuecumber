@@ -653,3 +653,54 @@ section,
   color: var(--default-color);
 }
 
+/*--------------------------------------------------------------
+# Project Detail Page
+--------------------------------------------------------------*/
+.project-detail-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+
+.project-detail-meta {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.project-detail-hero {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.project-detail-hero video,
+.project-detail-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-detail-body {
+  max-width: 720px;
+  margin-bottom: 50px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--default-color);
+}
+
+.project-detail-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.project-detail-gallery img {
+  width: 100%;
+  display: block;
+}

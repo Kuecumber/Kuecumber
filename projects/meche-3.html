@@ -110,9 +110,9 @@
             <img src="../assets/img/portfolio/PROJECT3-split-1.png" alt="">
           </div>
           <div class="split-text">
-            <h3 class="project-detail-subhead">Initial Draft</h3>
+            <h3 class="project-detail-subhead">CAD</h3>
             <p>
-              Assembling this drone was similar to making your own pc. Except soldering dominated over connectors. Simply because a pc is static while a drone is dynamic. Because my environment lacked a proper workstation, I modeled my own soldering station in Blender, printed in PLA, to fit the tools bought from AliExpress and Amazon. Brass Wool is a MUST. The solder (HengTianMei) unexpectedly exceeded my expectations tenfold. Because this was my first mass soldering, it took multiple attempts. Connecting the flight controller to BetaFlight worked with no issues. 
+              Custom mounts, brackets, and enclosures were modeled in CAD to better fit this project's needs. I simply modeled a rough draft of an actual part, such as the D5 pump and radiator, measured lengths using my Walmart $10 caliper, and designed custom parts around them. Other than the hexagonal reservoir bracket, everything else was an original idea. As someone who had a decent amount of experience in 3D Modeling (Note: CAD and Artistic 3D Modeling aren't the same), aesthetics were heavily valued. There were multiple ways for me to connect covers to their bases. One way was to simply print a low-tolerance wall and use friction tape to ensure a tight fit. Another was to use neodymium magnets. And finally, the most common approach was simply screwing a bolt down. Rather than using self-tapping screws, I superglued nuts or pressed heat inserts onto the base. 
             </p>
           </div>
         </div>
@@ -120,9 +120,9 @@
 
         <div class="project-detail-split">
           <div class="split-text">
-            <h3 class="project-detail-subhead">Continued</h3>
+            <h3 class="project-detail-subhead">Soldering</h3>
             <p>
-              Next up was adding the VTX, LEDs and connecting the receiver to my radio (RadioMaster Pocket ELRS). I had trouble mounting the VTX to avoid shorting. Wires on the LEDs were very fragile and had to be handled with caution. Binding the receiver to the radio was a massive hassle. Motors spun perfectly fine without propellers on. With propellers attached, all hell broke loose.
+              Because this was my first experience in perfboard soldering, it may not be up to standards. Breadboard wiring techniques taught to me by my on-campus job at Embedded Systems Laboratories easily helped me with wiring and soldering on perfboards. The solder I've been using was the HengTianMei 60/40 solder from Amazon. The Mechanics solder is nothing compared to this solder. The iron used is the Pinecil V2. The majority of these parts were bought from AliExpress. 
             </p>
           </div>
           <div class="split-image">
@@ -135,9 +135,9 @@
             <img src="../assets/img/portfolio/PROJECT3-split-3.png" alt="">
           </div>
           <div class="split-text">
-            <h3 class="project-detail-subhead">Final Draft</h3>
+            <h3 class="project-detail-subhead">Assembling</h3>
             <p>
-              I replaced those cheap motors with Xing E Pro and propellers with new triple-bladed clear props. Stuttering fixed. Though the new problem is flying it. In NYC, drone regulations are strict. Had to obtain a TRUST Cert & Registration to fly in specific parks. However, those parks only allow flying in a certain area owned by an organization demanding costly memberships.
+              The max amperage of this system was around 32A. At such high amperage and with no knowledge of PCBs, parts were bound to get huge. Here's how the system works: There are two TB2504s. One on top for positive. Bottom for negative. All terminals on the bottom TB are bridged with copper. For the top, only three of the terminals are bridged while the last one is left alone. That way, I can use a 4-pin relay to switch power to the bridged positive terminals via a 5-pin LED switch, with the relay being powered by the non-bridged positive terminal connected with an inline fuse. The LED switch was for aesthetic purposes. Everything else is controlled by the ESP32S3 Supermini, and values can be manually adjusted through the rotary encoder. Crimping wire lugs (Ring & Fork terminals) were also heavily utilized. PC Fans were used on the pump side for aesthetic purposes. As you all know, RGB increases performance... 
             </p>
           </div>
         </div>
